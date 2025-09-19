@@ -7,7 +7,18 @@ const FinalCTA: React.FC = () => {
   return (
     <section id="final-cta" className="relative overflow-hidden px-6 py-24">
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#1a022d] to-[#3b0a6e]" />
-      <div className="mx-auto max-w-5xl text-center">
+
+      {/* Cyberpunk Background */}
+      <div className="absolute inset-0 -z-5">
+        <img
+          src="/images/cyberpunk-meme-city.png"
+          alt="Cyberpunk Meme City"
+          className="h-full w-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1a022d] via-transparent to-[#1a022d]" />
+      </div>
+
+      <div className="relative mx-auto max-w-5xl text-center">
         <h2 className={`text-3xl font-extrabold sm:text-5xl ${neon.textGlow}`}>
           $CROWNIE isn&apos;t just a coin. It&apos;s a crown.
         </h2>

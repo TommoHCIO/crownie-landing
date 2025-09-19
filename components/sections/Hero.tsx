@@ -26,8 +26,7 @@ const Hero: React.FC = () => {
         backgroundImage: "url('/images/hero-banner-background.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed"
+        backgroundRepeat: "no-repeat"
       }}
     >
       <div className="absolute inset-0 bg-black/60" />
@@ -63,8 +62,11 @@ const Hero: React.FC = () => {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(168,85,247,0.18),transparent_40%),radial-gradient(circle_at_80%_70%,rgba(168,85,247,0.16),transparent_50%)]" />
             <div className="relative z-10 grid h-full w-full place-items-center">
               <div className="text-center">
-                <Sparkles className="mx-auto h-8 w-8 text-purple-300" />
-                <Crown className="mx-auto mt-2 h-20 w-20 text-purple-400" />
+                <img
+                  src="/images/crown-coin-glow.png"
+                  alt="CROWNIE Crown Coin with Golden Glow"
+                  className="mx-auto h-32 w-32 object-contain"
+                />
                 <p className="mt-3 text-sm text-gray-300">The Crown Awaits</p>
               </div>
             </div>

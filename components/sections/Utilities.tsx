@@ -56,9 +56,25 @@ const Utilities: React.FC = () => {
             </div>
           </Card>
 
+          {/* Meme Contests with Visual */}
+          <Card className="relative overflow-hidden">
+            <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-purple-500/10 blur-2xl" />
+            <div className="flex flex-col gap-4">
+              <img
+                src="/images/meme-war-crown.png"
+                alt="Epic Meme Contests with Crown Prize"
+                className="h-32 w-full object-cover rounded-lg"
+              />
+              <div>
+                <h3 className="font-semibold text-white">Meme Contests</h3>
+                <p className="mt-1 text-sm text-gray-300">Brackets & viral challenges with prize pools and burns.</p>
+              </div>
+            </div>
+          </Card>
+
           {/* Regular utility cards */}
-          {utilities.slice(1, -2).map(({ icon: Icon, title, desc }, i) => (
-            <Card key={i + 1} className="relative overflow-hidden">
+          {utilities.slice(2, -2).map(({ icon: Icon, title, desc }, i) => (
+            <Card key={i + 2} className="relative overflow-hidden">
               <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-purple-500/10 blur-2xl" />
               <div className="flex items-start gap-4">
                 <motion.div

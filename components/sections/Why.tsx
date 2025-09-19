@@ -40,6 +40,18 @@ const Why: React.FC = () => {
           </Card>
         </div>
         <div className="relative my-12 h-px w-full bg-gradient-to-r from-transparent via-purple-500/60 to-transparent" />
+
+        {/* Meme Battle Visualization */}
+        <div className="mt-12 text-center">
+          <img
+            src="/images/pepe-vs-doge-classic.png"
+            alt="Epic Meme Battle: The CROWNIE Solution"
+            className="mx-auto h-48 w-full max-w-2xl object-contain rounded-lg"
+          />
+          <p className="mt-4 text-sm text-purple-200">
+            CROWNIE brings unity to the meme wars through fair rewards and governance
+          </p>
+        </div>
       </div>
     </section>
   );

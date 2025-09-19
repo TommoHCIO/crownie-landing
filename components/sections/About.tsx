@@ -63,8 +63,16 @@ const About: React.FC = () => {
                   className="h-full w-full object-cover"
                 />
               </motion.div>
-              <div className="col-span-2 flex items-center justify-center rounded-xl border border-purple-500/30 bg-gradient-to-br from-black/40 to-purple-950/20 p-6 text-center text-sm text-purple-200">
-                Own Meme Culture. Earn the Crown.
+              <div className="col-span-2 relative overflow-hidden rounded-xl border border-purple-500/30">
+                <img
+                  src="/images/royal-treasury-vault.png"
+                  alt="CROWNIE Royal Treasury Vault"
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-0 right-0 text-center">
+                  <p className="text-sm text-purple-200 font-medium">Royal Treasury Powers the Empire</p>
+                </div>
               </div>
             </div>
           </div>

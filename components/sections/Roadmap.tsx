@@ -60,6 +60,19 @@ const Roadmap: React.FC = () => {
             ))}
           </div>
         </div>
+
+        {/* Future Vision */}
+        <div className="mt-16 text-center">
+          <h3 className="mb-6 text-2xl font-bold text-white">The Future of Meme Culture</h3>
+          <img
+            src="/images/neon-city-billboards.png"
+            alt="CROWNIE Vision: Neon City with Meme Billboards"
+            className="mx-auto h-64 w-full max-w-4xl object-cover rounded-lg"
+          />
+          <p className="mt-4 text-sm text-purple-200 max-w-2xl mx-auto">
+            A world where memes power economies, creators are rewarded fairly, and the crown belongs to the community
+          </p>
+        </div>
       </div>
     </section>
   );
