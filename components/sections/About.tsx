@@ -42,22 +42,29 @@ const About: React.FC = () => {
         </div>
         <div className="relative">
           <div className={`relative aspect-square w-full overflow-hidden rounded-2xl bg-black/40 p-4 ring-1 ring-purple-500/40 shadow-[0_0_24px_rgba(168,85,247,0.38)]`}>
-            <div className="grid h-full w-full grid-cols-3 gap-3">
-              {[...Array(6)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  whileHover={{ scale: 1.03 }}
-                  className="relative overflow-hidden rounded-xl bg-white/5"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent" />
-                  <div className="absolute inset-0 animate-pulse" style={{ boxShadow: "inset 0 0 30px rgba(168,85,247,0.15)" }} />
-                  <div className="absolute bottom-2 left-2 rounded bg-black/50 px-2 py-1 text-[10px] text-purple-200 ring-1 ring-purple-400/40">
-                    meme #{i + 1}
-                  </div>
-                </motion.div>
-              ))}
-              <div className="col-span-3 flex items-center justify-center rounded-xl border border-purple-500/30 bg-gradient-to-br from-black/40 to-purple-950/20 p-6 text-center text-sm text-purple-200">
-                Scroll to preview more NFTs
+            <div className="grid h-full w-full grid-cols-2 gap-4">
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                className="relative overflow-hidden rounded-xl"
+              >
+                <img
+                  src="/images/meme-cards-crown.png"
+                  alt="CROWNIE meme cards with crown"
+                  className="h-full w-full object-cover"
+                />
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                className="relative overflow-hidden rounded-xl"
+              >
+                <img
+                  src="/images/meme-economy-banner.png"
+                  alt="Join the Meme Economy"
+                  className="h-full w-full object-cover"
+                />
+              </motion.div>
+              <div className="col-span-2 flex items-center justify-center rounded-xl border border-purple-500/30 bg-gradient-to-br from-black/40 to-purple-950/20 p-6 text-center text-sm text-purple-200">
+                Own Meme Culture. Earn the Crown.
               </div>
             </div>
           </div>

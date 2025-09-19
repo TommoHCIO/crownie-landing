@@ -19,9 +19,20 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative overflow-hidden" onMouseMove={onMouseMove}>
+    <section
+      className="relative overflow-hidden"
+      onMouseMove={onMouseMove}
+      style={{
+        backgroundImage: "url('/images/hero-banner-background.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed"
+      }}
+    >
+      <div className="absolute inset-0 bg-black/60" />
       <Particles />
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-24 md:grid-cols-2 md:py-32">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-24 md:grid-cols-2 md:py-32">
         <div>
           <div className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-3 py-1 ring-1 ring-purple-500/40">
             <span className="text-[10px] uppercase tracking-widest text-purple-200">On Base</span>

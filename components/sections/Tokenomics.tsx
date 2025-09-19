@@ -20,34 +20,12 @@ const Tokenomics: React.FC = () => {
         />
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <Card>
-            <div className="h-72 w-full">
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Tooltip
-                    contentStyle={{
-                      background: "#0b0710",
-                      border: "1px solid rgba(168,85,247,0.3)",
-                      borderRadius: 12,
-                      color: "white",
-                    }}
-                  />
-                  <Pie
-                    data={tokenomicsData}
-                    innerRadius={60}
-                    outerRadius={100}
-                    paddingAngle={3}
-                    dataKey="value"
-                  >
-                    {tokenomicsData.map((_, index) => (
-                      <Cell
-                        key={index}
-                        fill={COLORS[index % COLORS.length]}
-                        stroke="rgba(255,255,255,0.08)"
-                      />
-                    ))}
-                  </Pie>
-                </PieChart>
-              </ResponsiveContainer>
+            <div className="relative h-72 w-full">
+              <img
+                src="/images/tokenomics-infographic.png"
+                alt="CROWNIE Tokenomics - 45% Liquidity, 20% Treasury, 10% Team"
+                className="h-full w-full object-contain rounded-lg"
+              />
             </div>
             <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
               {tokenomicsData.map((d) => (
@@ -57,7 +35,7 @@ const Tokenomics: React.FC = () => {
                 </div>
               ))}
             </div>
-            <p className="mt-3 text-xs text-gray-400">Total: {total}%</p>
+            <p className="mt-3 text-xs text-gray-400">Professional Tokenomics Breakdown</p>
           </Card>
           <div className="space-y-4">
             <Card>
