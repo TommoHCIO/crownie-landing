@@ -13,29 +13,53 @@ const Why: React.FC = () => {
           title="Why $CROWNIE?"
           subtitle="Fixing the fundamentals of the meme coin meta."
         />
-        <div className="relative grid grid-cols-1 gap-6 md:grid-cols-2">
-          <Card className="relative">
-            <div className="absolute right-4 top-4 text-rose-400/80">
-              <XCircle className="h-6 w-6" />
+        <div className="relative grid grid-cols-1 gap-8 md:grid-cols-2">
+          <Card className="relative border-2 border-red-500/30 bg-red-900/10">
+            <div className="absolute right-6 top-6 text-red-400 animate-pulse">
+              <XCircle className="h-8 w-8" />
             </div>
-            <h3 className="mb-4 text-lg font-semibold text-white">Traditional Problems</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li>Hype burns fast, trust erodes</li>
-              <li>No alignment between creators and holders</li>
-              <li>Opaque token flows and rug mechanics</li>
-              <li>Engagement ≠ value</li>
+            <h3 className="mb-6 text-2xl font-bold text-red-300">Traditional Problems</h3>
+            <ul className="space-y-4 text-lg text-gray-200">
+              <li className="flex items-center gap-3">
+                <span className="h-2 w-2 bg-red-400 rounded-full"></span>
+                Hype burns fast, trust erodes
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="h-2 w-2 bg-red-400 rounded-full"></span>
+                No alignment between creators and holders
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="h-2 w-2 bg-red-400 rounded-full"></span>
+                Opaque token flows and rug mechanics
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="h-2 w-2 bg-red-400 rounded-full"></span>
+                Engagement ≠ value
+              </li>
             </ul>
           </Card>
-          <Card className="relative">
-            <div className="absolute right-4 top-4 text-emerald-400/80">
-              <CheckCircle2 className="h-6 w-6" />
+          <Card className="relative border-2 border-emerald-500/50 bg-emerald-900/10 shadow-emerald-glow">
+            <div className="absolute right-6 top-6 text-emerald-400 animate-pulse">
+              <CheckCircle2 className="h-8 w-8" />
             </div>
-            <h3 className="mb-4 text-lg font-semibold text-white">How $CROWNIE Fixes It</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li>E2E converts culture into on‑chain rewards</li>
-              <li>Locked LP, audits, transparent treasury</li>
-              <li>Governance locks align power with commitment</li>
-              <li>Memes & shares drive demand / burns</li>
+            <h3 className="mb-6 text-2xl font-bold text-gradient-emerald">How $CROWNIE Fixes It</h3>
+            <ul className="space-y-4 text-lg text-gray-200">
+              <li className="flex items-center gap-3">
+                <CheckCircle2 className="h-5 w-5 text-emerald-400" />
+                <span className="text-gradient-cyber">E2E</span> converts culture into on‑chain rewards
+              </li>
+              <li className="flex items-center gap-3">
+                <CheckCircle2 className="h-5 w-5 text-emerald-400" />
+                Locked LP, audits, <span className="text-gradient-gold">transparent treasury</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <CheckCircle2 className="h-5 w-5 text-emerald-400" />
+                <span className="text-gradient-royal">Governance locks</span> align power with commitment
+              </li>
+              <li className="flex items-center gap-3">
+                <CheckCircle2 className="h-5 w-5 text-emerald-400" />
+                Memes & shares drive demand / <span className="text-gradient-gold">burns</span>
+              </li>
             </ul>
           </Card>
         </div>

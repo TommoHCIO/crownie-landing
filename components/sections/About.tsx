@@ -14,28 +14,33 @@ const About: React.FC = () => {
             title="Not Just a Meme Coin"
             subtitle="Viral-first, value-backed. Every post and share powers the engine."
           />
-          <ul className="space-y-3 text-gray-300">
-            <li className="flex items-start gap-3">
-              <CheckCircle2 className="mt-1 h-5 w-5 text-purple-400" />
-              <span>Viral-first, value-backed economy</span>
+          <ul className="space-y-5 text-gray-200 text-lg">
+            <li className="flex items-start gap-4">
+              <CheckCircle2 className="mt-1 h-6 w-6 text-emerald-400 shadow-emerald-glow" />
+              <span>Viral-first, <span className="text-gradient-gold font-semibold">value-backed economy</span></span>
             </li>
-            <li className="flex items-start gap-3">
-              <CheckCircle2 className="mt-1 h-5 w-5 text-purple-400" />
-              <span>Locked LP, audits, governance = anti‑rug</span>
+            <li className="flex items-start gap-4">
+              <CheckCircle2 className="mt-1 h-6 w-6 text-emerald-400 shadow-emerald-glow" />
+              <span>Locked LP, audits, governance = <span className="text-gradient-cyber font-semibold">anti‑rug</span></span>
             </li>
-            <li className="flex items-start gap-3">
-              <CheckCircle2 className="mt-1 h-5 w-5 text-purple-400" />
-              <span>Every meme or share impacts tokenomics</span>
+            <li className="flex items-start gap-4">
+              <CheckCircle2 className="mt-1 h-6 w-6 text-emerald-400 shadow-emerald-glow" />
+              <span>Every meme or share impacts <span className="text-gradient-emerald font-semibold">tokenomics</span></span>
             </li>
-            <li className="flex items-start gap-3">
-              <CheckCircle2 className="mt-1 h-5 w-5 text-purple-400" />
-              <span>Community holds the crown</span>
+            <li className="flex items-start gap-4">
+              <CheckCircle2 className="mt-1 h-6 w-6 text-emerald-400 shadow-emerald-glow" />
+              <span><span className="text-gradient-royal font-semibold">Community holds the crown</span></span>
             </li>
           </ul>
-          <div className="mt-6 flex flex-wrap gap-2 text-xs text-purple-200">
-            {["E2E", "Creator Tips", "On‑chain Claims", "Royal Treasury"].map((t) => (
-              <span key={t} className="rounded-full bg-purple-500/10 px-3 py-1 ring-1 ring-purple-500/30">
-                {t}
+          <div className="mt-8 flex flex-wrap gap-3 text-sm">
+            {[
+              { label: "E2E", color: "gold" },
+              { label: "Creator Tips", color: "cyber" },
+              { label: "On‑chain Claims", color: "emerald" },
+              { label: "Royal Treasury", color: "royal" }
+            ].map((item) => (
+              <span key={item.label} className={`rounded-full bg-gradient-to-r from-purple-500/20 to-${item.color === 'gold' ? 'yellow' : item.color === 'cyber' ? 'cyan' : item.color === 'emerald' ? 'green' : 'purple'}-500/20 px-4 py-2 ring-1 ring-purple-500/40 text-gradient-${item.color} font-semibold transition-all hover:scale-105 hover:ring-yellow-400/60`}>
+                {item.label}
               </span>
             ))}
           </div>
@@ -63,15 +68,15 @@ const About: React.FC = () => {
                   className="h-full w-full object-cover"
                 />
               </motion.div>
-              <div className="col-span-2 relative overflow-hidden rounded-xl border border-purple-500/30">
+              <div className="col-span-2 relative overflow-hidden rounded-xl border border-purple-500/30 h-32">
                 <img
                   src="/images/royal-treasury-vault.png"
                   alt="CROWNIE Royal Treasury Vault"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-0 right-0 text-center">
-                  <p className="text-sm text-purple-200 font-medium">Royal Treasury Powers the Empire</p>
+                  <p className="text-sm text-gradient-gold font-bold">Royal Treasury Powers the Empire</p>
                 </div>
               </div>
             </div>

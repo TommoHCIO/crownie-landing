@@ -19,29 +19,33 @@ const FinalCTA: React.FC = () => {
       </div>
 
       <div className="relative mx-auto max-w-5xl text-center">
-        <h2 className={`text-3xl font-extrabold sm:text-5xl ${neon.textGlow}`}>
-          $CROWNIE isn&apos;t just a coin. It&apos;s a crown.
+        <h2 className="text-4xl font-black text-gradient-royal animate-gradient-text sm:text-6xl lg:text-7xl leading-tight">
+          $CROWNIE isn&apos;t just a coin.
+          <br />
+          <span className="text-gradient-gold animate-gradient-text">It&apos;s a crown.</span>
         </h2>
-        <p className="mx-auto mt-3 max-w-2xl text-gray-300">The community decides who wears it.</p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <p className="mx-auto mt-8 max-w-3xl text-2xl text-gray-200 leading-relaxed">
+          The <span className="text-gradient-cyber font-semibold">community</span> decides who wears it.
+        </p>
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-6">
           <a
             id="buy"
             href="#"
-            className="rounded-full bg-emerald-400 px-6 py-3 font-semibold text-black shadow transition hover:-translate-y-0.5 hover:bg-emerald-300"
+            className="btn-gradient-gold rounded-full px-10 py-5 text-xl font-black text-black shadow-gold-glow"
           >
-            Buy $CROWNIE
+            👑 Buy $CROWNIE
           </a>
           <a
             href="#"
-            className={`rounded-full px-6 py-3 font-semibold text-white ring-2 ring-purple-400/80 transition hover:-translate-y-0.5 hover:bg-purple-500/10 ${neon.glow}`}
+            className="btn-gradient-cyber rounded-full px-10 py-5 text-xl font-black text-black shadow-cyber-glow"
           >
-            Join Telegram
+            💬 Join Telegram
           </a>
           <a
             href="#"
-            className="rounded-full bg-white/10 px-6 py-3 font-semibold text-white ring-1 ring-white/20 transition hover:-translate-y-0.5"
+            className="rounded-full bg-gradient-to-r from-white/10 to-purple-500/20 px-10 py-5 text-xl font-bold text-white ring-2 ring-white/30 transition-all hover:-translate-y-1 hover:bg-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]"
           >
-            Follow on X
+            🐦 Follow on X
           </a>
         </div>
       </div>

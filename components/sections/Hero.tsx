@@ -36,21 +36,25 @@ const Hero: React.FC = () => {
           <div className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-3 py-1 ring-1 ring-purple-500/40">
             <span className="text-[10px] uppercase tracking-widest text-purple-200">On Base</span>
           </div>
-          <h1 className={`mt-4 text-4xl font-extrabold leading-tight sm:text-6xl ${neon.textGlow}`}>
-            <span className="inline-flex items-center gap-3">
-              <Crown className="h-8 w-8 -translate-y-1 text-purple-400 sm:h-10 sm:w-10" />
-              Own Meme Culture. Earn the Crown.
+          <h1 className="mt-6 text-5xl font-black leading-[0.9] sm:text-7xl lg:text-8xl">
+            <span className="block text-gradient-royal animate-gradient-text">
+              Own Meme Culture.
+            </span>
+            <span className="block text-gradient-gold animate-gradient-text mt-2">
+              Earn the Crown.
             </span>
           </h1>
-          <p className="mt-4 max-w-xl text-base text-gray-300 sm:text-lg">
-            $CROWNIE is the first meme economy on Base — rewarding creativity, driving culture, and turning engagement into value.
+          <p className="mt-8 max-w-2xl text-xl text-gray-200 leading-relaxed">
+            <span className="text-gradient-cyber font-semibold">$CROWNIE</span> is the first meme economy on Base — rewarding
+            <span className="text-gradient-emerald font-semibold"> creativity</span>, driving
+            <span className="text-gradient-gold font-semibold"> culture</span>, and turning engagement into value.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a href="#about" className={`rounded-full px-5 py-3 text-sm font-semibold text-white ring-2 ring-purple-400/70 transition hover:-translate-y-0.5 hover:bg-purple-500/10 ${neon.glow}`}>
-              ↓ Learn More
+          <div className="mt-10 flex flex-wrap gap-6">
+            <a href="#about" className="btn-gradient-gold rounded-full px-8 py-4 text-lg font-bold text-black shadow-gold-glow">
+              👑 Join the Kingdom
             </a>
-            <a href="#tokenomics" className={`rounded-full px-5 py-3 text-sm font-semibold text-white ring-2 ring-purple-400/70 transition hover:-translate-y-0.5 hover:bg-purple-500/10 ${neon.glow}`}>
-              View Tokenomics
+            <a href="#tokenomics" className="btn-gradient-cyber rounded-full px-8 py-4 text-lg font-bold text-black shadow-cyber-glow">
+              📊 View Tokenomics
             </a>
           </div>
         </div>
@@ -62,12 +66,20 @@ const Hero: React.FC = () => {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(168,85,247,0.18),transparent_40%),radial-gradient(circle_at_80%_70%,rgba(168,85,247,0.16),transparent_50%)]" />
             <div className="relative z-10 grid h-full w-full place-items-center">
               <div className="text-center">
-                <img
-                  src="/images/crown-coin-glow.png"
-                  alt="CROWNIE Crown Coin with Golden Glow"
-                  className="mx-auto h-32 w-32 object-contain"
-                />
-                <p className="mt-3 text-sm text-gray-300">The Crown Awaits</p>
+                <div className="relative">
+                  <img
+                    src="/images/crown-coin-glow.png"
+                    alt="CROWNIE Crown Coin with Golden Glow"
+                    className="mx-auto h-40 w-40 object-contain animate-crown-pulse"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/20 to-transparent animate-shimmer rounded-full" />
+                </div>
+                <p className="mt-4 text-lg font-semibold text-gradient-gold">The Crown Awaits</p>
+                <div className="mt-2 flex justify-center gap-1">
+                  <div className="h-1 w-1 bg-yellow-400 rounded-full animate-pulse" style={{ animationDelay: "0s" }} />
+                  <div className="h-1 w-1 bg-yellow-400 rounded-full animate-pulse" style={{ animationDelay: "0.2s" }} />
+                  <div className="h-1 w-1 bg-yellow-400 rounded-full animate-pulse" style={{ animationDelay: "0.4s" }} />
+                </div>
               </div>
             </div>
           </motion.div>

@@ -23,7 +23,7 @@ const Utilities: React.FC = () => {
           title="The Engine Behind the Meme Empire"
           subtitle="A layered utility stack designed for culture, alignment, and durability."
         />
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* Meme Arcade Feature with Visual */}
           <Card className="relative overflow-hidden md:col-span-2 lg:col-span-1">
             <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-purple-500/10 blur-2xl" />
