@@ -1,5 +1,4 @@
 import React from "react";
-import { neon } from "@/lib/constants";
 
 interface CardProps {
   children: React.ReactNode;

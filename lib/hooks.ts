@@ -3,16 +3,24 @@ import { useEffect } from "react";
 export function useSmoothScroll() {
   useEffect(() => {
     const handler = (e: Event) => {
-      const t = e.target as HTMLAnchorElement;
-      if (t?.tagName?.toLowerCase() === "a") {
-        const href = t.getAttribute("href");
-        if (href?.startsWith("#")) {
-          const el = document.querySelector(href);
-          if (el) {
-            e.preventDefault();
-            el.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
+      const target = (e.target as HTMLElement)?.closest("a");
+      if (!target) {
+        return;
+      }
+
+      const href = target.getAttribute("href");
+      if (!href || href === "#" || !href.startsWith("#")) {
+        return;
+      }
+
+      try {
+        const el = document.querySelector(href);
+        if (el) {
+          e.preventDefault();
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
         }
+      } catch (error) {
+        console.warn("Smooth scroll aborted for selector", href, error);
       }
     };
     document.addEventListener("click", handler);

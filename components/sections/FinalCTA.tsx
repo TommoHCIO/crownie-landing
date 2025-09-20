@@ -30,19 +30,19 @@ const FinalCTA: React.FC = () => {
         <div className="mt-12 flex flex-wrap items-center justify-center gap-6">
           <a
             id="buy"
-            href="#"
+            href="#tokenomics"
             className="btn-gradient-gold rounded-full px-10 py-5 text-xl font-black text-black shadow-gold-glow"
           >
             👑 Buy $CROWNIE
           </a>
           <a
-            href="#"
+            href="https://t.me/crownie" target="_blank" rel="noreferrer"
             className="btn-gradient-cyber rounded-full px-10 py-5 text-xl font-black text-black shadow-cyber-glow"
           >
             💬 Join Telegram
           </a>
           <a
-            href="#"
+            href="https://x.com/crownie" target="_blank" rel="noreferrer"
             className="rounded-full bg-gradient-to-r from-white/10 to-purple-500/20 px-10 py-5 text-xl font-bold text-white ring-2 ring-white/30 transition-all hover:-translate-y-1 hover:bg-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]"
           >
             🐦 Follow on X
