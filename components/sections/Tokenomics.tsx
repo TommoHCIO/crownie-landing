@@ -2,7 +2,6 @@
 
 import React, { useMemo } from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
-import type { TooltipProps } from "recharts";
 import { Info } from "lucide-react";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Card from "@/components/ui/Card";
@@ -11,14 +10,24 @@ import { tokenomicsData, COLORS } from "@/lib/constants";
 type ChartTooltipPayload = {
   name: string;
   value: number;
+  payload?: {
+    name: string;
+    value: number;
+  };
 };
 
-const ChartTooltip = ({ active, payload }: TooltipProps<number, string>) => {
+interface CustomTooltipProps {
+  active?: boolean;
+  payload?: ChartTooltipPayload[];
+  label?: string;
+}
+
+const ChartTooltip = ({ active, payload }: CustomTooltipProps) => {
   if (!active || !payload?.length) {
     return null;
   }
 
-  const { name, value } = payload[0] as ChartTooltipPayload;
+  const { name, value } = payload[0];
 
   return (
     <div className="rounded-lg border border-purple-500/30 bg-black/80 px-3 py-2 text-xs text-gray-200 shadow-lg backdrop-blur">
