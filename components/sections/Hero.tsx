@@ -20,16 +20,41 @@ const Hero: React.FC = () => {
 
   return (
     <section
-      className="relative overflow-hidden"
+      className="relative overflow-hidden bg-hero-depth"
       onMouseMove={onMouseMove}
-      style={{
-        backgroundImage: "url('/images/hero-banner-background.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat"
-      }}
     >
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-noise-texture animate-noise-texture" />
+      <div className="absolute inset-0 bg-black/40" />
+
+      {/* Floating meme fragments */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 text-6xl opacity-[0.03] animate-float-fragment" style={{ animationDelay: '0s' }}>
+          👑
+        </div>
+        <div className="absolute top-3/4 right-1/4 text-4xl opacity-[0.04] animate-float-fragment" style={{ animationDelay: '4s' }}>
+          💎
+        </div>
+        <div className="absolute top-1/2 left-3/4 text-5xl opacity-[0.03] animate-float-fragment" style={{ animationDelay: '8s' }}>
+          🚀
+        </div>
+        <div className="absolute top-1/6 right-1/3 text-3xl opacity-[0.05] animate-float-fragment" style={{ animationDelay: '2s' }}>
+          ⚡
+        </div>
+      </div>
+
+      {/* Parallax crown symbols */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/3 left-1/6 text-8xl opacity-[0.08] animate-crown-parallax" style={{ animationDelay: '0s' }}>
+          👑
+        </div>
+        <div className="absolute bottom-1/3 right-1/6 text-6xl opacity-[0.06] animate-crown-parallax" style={{ animationDelay: '3s' }}>
+          👑
+        </div>
+        <div className="absolute top-2/3 left-2/3 text-7xl opacity-[0.07] animate-crown-parallax" style={{ animationDelay: '6s' }}>
+          👑
+        </div>
+      </div>
+
       <Particles />
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-24 md:grid-cols-2 md:py-32">
         <div>
@@ -37,10 +62,10 @@ const Hero: React.FC = () => {
             <span className="text-[10px] uppercase tracking-widest text-purple-200">On Base</span>
           </div>
           <h1 className="mt-6 text-3xl font-black leading-[0.9] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
-            <span className="block text-gradient-royal animate-gradient-text">
+            <span className="block text-gradient-royal animate-gradient-text animate-pulse-glow">
               Own Meme Culture.
             </span>
-            <span className="block text-gradient-gold animate-gradient-text mt-2">
+            <span className="block text-gradient-gold animate-gradient-text animate-pulse-glow mt-2">
               Earn the Crown.
             </span>
           </h1>
