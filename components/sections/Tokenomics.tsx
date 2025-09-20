@@ -80,7 +80,7 @@ const Tokenomics: React.FC = () => {
               </ResponsiveContainer>
               <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
                 <div className="rounded-full bg-black/60 px-6 py-4 text-center text-xs text-purple-200 ring-1 ring-purple-500/30">
-                  Total Supply
+                  Distribution
                   <div className="text-2xl font-bold text-white">{total}%</div>
                 </div>
               </div>

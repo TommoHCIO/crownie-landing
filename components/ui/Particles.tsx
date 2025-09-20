@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 
 interface ParticlesProps {
   count?: number;
@@ -10,9 +10,17 @@ const Particles: React.FC<ParticlesProps> = ({ count = 80 }) => {
     window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  // Reduce particle count on mobile for better performance
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  const particleCount = useMemo(() => {
+    if (prefersReduced) return 0;
+    if (isMobile) return Math.min(count / 2, 30);
+    return count;
+  }, [count, prefersReduced, isMobile]);
+
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      {[...Array(count)].map((_, i) => (
+      {[...Array(particleCount)].map((_, i) => (
         <span
           aria-hidden
           key={i}

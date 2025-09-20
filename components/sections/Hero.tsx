@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
           <div className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-3 py-1 ring-1 ring-purple-500/40">
             <span className="text-[10px] uppercase tracking-widest text-purple-200">On Base</span>
           </div>
-          <h1 className="mt-6 text-5xl font-black leading-[0.9] sm:text-7xl lg:text-8xl">
+          <h1 className="mt-6 text-3xl font-black leading-[0.9] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
             <span className="block text-gradient-royal animate-gradient-text">
               Own Meme Culture.
             </span>
@@ -44,16 +44,16 @@ const Hero: React.FC = () => {
               Earn the Crown.
             </span>
           </h1>
-          <p className="mt-8 max-w-2xl text-xl text-gray-200 leading-relaxed">
+          <p className="mt-6 sm:mt-8 max-w-2xl text-lg sm:text-xl text-gray-200 leading-relaxed">
             <span className="text-gradient-cyber font-semibold">$CROWNIE</span> is the first meme economy on Base — rewarding
             <span className="text-gradient-emerald font-semibold"> creativity</span>, driving
             <span className="text-gradient-gold font-semibold"> culture</span>, and turning engagement into value.
           </p>
-          <div className="mt-10 flex flex-wrap gap-6">
-            <a href="#about" className="btn-gradient-gold rounded-full px-8 py-4 text-lg font-bold text-black shadow-gold-glow">
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6">
+            <a href="#about" className="btn-gradient-gold rounded-full px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-bold text-black shadow-gold-glow text-center">
               👑 Join the Kingdom
             </a>
-            <a href="#tokenomics" className="btn-gradient-cyber rounded-full px-8 py-4 text-lg font-bold text-black shadow-cyber-glow">
+            <a href="#tokenomics" className="btn-gradient-cyber rounded-full px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-bold text-black shadow-cyber-glow text-center">
               📊 View Tokenomics
             </a>
           </div>
@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
                   <img
                     src="/images/crown-coin-glow.png"
                     alt="CROWNIE Crown Coin with Golden Glow"
-                    className="mx-auto h-40 w-40 object-contain animate-crown-pulse"
+                    className="mx-auto h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40 object-contain animate-crown-pulse"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/20 to-transparent animate-shimmer rounded-full" />
                 </div>

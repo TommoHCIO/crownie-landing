@@ -175,6 +175,42 @@ body {
   outline-offset: 2px;
 }
 
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-crown-pulse,
+  .animate-gradient-text,
+  .animate-shimmer,
+  .animate-float {
+    animation: none !important;
+  }
+}
+
+/* Performance optimization for animations */
+.animate-crown-pulse,
+.animate-gradient-text,
+.animate-shimmer,
+.animate-float {
+  will-change: transform;
+}
+
+/* Mobile performance optimizations */
+@media (max-width: 768px) {
+  .animate-crown-pulse {
+    animation-duration: 4s; /* Slower on mobile */
+  }
+
+  .animate-gradient-text {
+    animation-duration: 6s; /* Slower on mobile */
+  }
+}
+
 /* Custom scrollbar for webkit browsers */
 ::-webkit-scrollbar {
   width: 8px;
@@ -193,37 +229,74 @@ body {
   background: linear-gradient(45deg, #c084fc, #a855f7);
 }
 
-/* Premium Gradient Text Utilities */
+/* Premium Gradient Text Utilities with Accessibility Fallbacks */
 .text-gradient-gold {
+  color: #FFD700; /* Fallback color for accessibility */
   background: linear-gradient(135deg, #FFD700, #FFA500, #FFD700);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+/* Fallback for browsers that don't support background-clip: text */
+@supports not (-webkit-background-clip: text) {
+  .text-gradient-gold {
+    color: #FFD700;
+    -webkit-text-fill-color: #FFD700;
+  }
 }
 
 .text-gradient-cyber {
+  color: #00FFFF; /* Fallback color for accessibility */
   background: linear-gradient(135deg, #00FFFF, #00CED1, #40E0D0);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+@supports not (-webkit-background-clip: text) {
+  .text-gradient-cyber {
+    color: #00FFFF;
+    -webkit-text-fill-color: #00FFFF;
+  }
 }
 
 .text-gradient-royal {
+  color: #a855f7; /* Fallback color for accessibility */
   background: linear-gradient(135deg, #FFD700, #a855f7, #FFD700);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(168, 85, 247, 0.3);
+}
+
+@supports not (-webkit-background-clip: text) {
+  .text-gradient-royal {
+    color: #a855f7;
+    -webkit-text-fill-color: #a855f7;
+  }
 }
 
 .text-gradient-emerald {
+  color: #00C896; /* Fallback color for accessibility */
   background: linear-gradient(135deg, #00C896, #40E0D0, #00C896);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(0, 200, 150, 0.3);
+}
+
+@supports not (-webkit-background-clip: text) {
+  .text-gradient-emerald {
+    color: #00C896;
+    -webkit-text-fill-color: #00C896;
+  }
 }
 
 /* Enhanced Shadow Effects */
